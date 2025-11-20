@@ -37,6 +37,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Wait for SonarCloud Quality Gate
-        uses: SonarSource/sonarcloud-github-action@v2.4.0
+        uses: SonarSource/sonarcloud-github-action@v5.0.0
         with:
           sonar-token: ${{ secrets.SONAR_TOKEN }}
