@@ -6,6 +6,8 @@
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
+    <sonar.projectKey>MAKABEO_sonar-demo</sonar.projectKey>
+    <sonar.organization>makabeo</sonar.organization>
   </properties>
   <build>
     <plugins>

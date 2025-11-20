@@ -27,8 +27,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           mvn -B clean verify sonar:sonar \
-            -Dsonar.projectKey=REPLACE_PROJECT_KEY \
-            -Dsonar.organization=REPLACE_ORG \
+            -Dsonar.projectKey=MAKABEO_sonar-demo \
+            -Dsonar.organization=makabeo \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=${SONAR_TOKEN}
 
