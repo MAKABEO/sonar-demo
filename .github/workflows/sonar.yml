@@ -36,7 +36,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Wait for SonarCloud Quality Gate
-        uses: SonarSource/sonarcloud-quality-gate-action@v1
+      - uses: actions/checkout@v4
         with:
-          sonar-token: ${{ secrets.SONAR_TOKEN }}
+          fetch-depth: 0
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v6.0.0
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
