@@ -40,5 +40,6 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@v5.0.0
         with:
           sonar-token: ${{ secrets.SONAR_TOKEN }}
-          sonar-projectKey: MAKABEO_sonar-demo
-          sonar-organization: makabeo
+          args: >
+            -Dsonar.organization=makabeo
+            -Dsonar.projectKey=MAKABEO_sonar-demo
